@@ -71,20 +71,24 @@ venv\Scripts\activate         # On Windows
 Install dependencies
 
 bash
-Copy code
-```pip install -r requirements.txt``
+
+```pip install -r requirements.txt```
+
 Create .env file
 
 ```ini
-Copy code
+
 API_key=your_api_key_here
 ```
 Run locally
 
 bash
-Copy code
+```
 uvicorn main:app --reload
+```
 Test endpoint
+
+
 
 
 
