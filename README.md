@@ -52,52 +52,63 @@ Copy code
   "persona_scenario": "Lyra begins composing poems...",
   "persona_subscenario": "One poem unexpectedly moves a human reader..."
 }
-```
 
-###⚙️ Local Setup
-Clone the repo
+
+## 🧠 Persona-Based Storyline API
+
+This project generates a 7-day continuous storyline and substoryline based on user personas — Explorer, Builder, Dreamer, and Challenger — blending cognitive intelligence, storytelling, and personality modeling.
+
+---
+
+### ⚙️ Local Setup
 
 bash
 Copy code
 git clone https://github.com/MAN-2/Persona_Based_Storyline_API.git
 cd Persona_Based_Storyline_API
+
 Create and activate virtual environment
 
 bash
 Copy code
 python -m venv venv
-source venv/bin/activate      # On Mac/Linux
-venv\Scripts\activate         # On Windows
+source venv/bin/activate   # On Mac/Linux
+venv\Scripts\activate      # On Windows
+
 Install dependencies
 
 bash
-
-```pip install -r requirements.txt```
+Copy code
+pip install -r requirements.txt
 
 Create .env file
 
-```ini
+bash
+Copy code
+GROQ_API_KEY=your_api_key_here
 
-API_key=your_api_key_here
-```
 Run locally
 
 bash
-```
+Copy code
 uvicorn main:app --reload
-```
-Test endpoint
+
+---
+
+### 🚀 Test the Endpoint
+
+bash
+Copy code
+curl -X POST http://127.0.0.1:8000/generate_scenario \
+     -H "Content-Type: application/json" \
+     -d '{"persona": "Explorer"}'
+
+---
+
+### 🧑‍💻 Author
+**Manu Tyagi**  
+AI Developer | Robotics Engineer | Automation Enthusiast  
+
+---
 
 
-
-
-
-
-🧑‍💻 Author
-Manu Tyagi
-AI Developer | Robotics Engineer | Automation Enthusiast
-
-
-🪄 License
-This project is released under the MIT License.
-Feel free to fork, improve, and build your own creative AI systems on top of it
