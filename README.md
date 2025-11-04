@@ -41,17 +41,22 @@ Generate a persona-based storyline and subscenario.
 Example Curl:
 
 Copy code
+```
+```bash
 curl -X POST https://persona-storyline.onrender.com/generate_scenario \
      -H "Content-Type: application/json" \
      -d '{"persona": "An introverted AI trying to write human poetry"}'
+```
+
 Example Response:
-json
-Copy code
+```json
+
 {
   "Overall_story": "In a quiet data center, an AI named Lyra...",
   "persona_scenario": "Lyra begins composing poems...",
   "persona_subscenario": "One poem unexpectedly moves a human reader..."
 }
+```
 
 
 ## 🧠 Persona-Based Storyline API
@@ -63,46 +68,44 @@ This project generates a 7-day continuous storyline and substoryline based on us
 ### ⚙️ Local Setup
 
 
-Copy code
+1. Clone Repo
+```bash
 git clone https://github.com/MAN-2/Persona_Based_Storyline_API.git
 cd Persona_Based_Storyline_API
+```
 
-Create and activate virtual environment
+2.Create and activate virtual environment
+```bash
 
-
-Copy code
 python -m venv venv
 source venv/bin/activate   # On Mac/Linux
 venv\Scripts\activate      # On Windows
-
-Install dependencies
-
-
-Copy code
+```
+3.Install dependencies
+```bash
 pip install -r requirements.txt
-
-Create .env file
-
-
-Copy code
+```
+4.Create .env file
+```bash
 API_key=your_api_key_here
+```
+5. Run locally
 
-Run locally
+```bash
 
-
-Copy code
 uvicorn main:app --reload
+```
 
 ---
 
 ### 🚀 Test the Endpoint
 
 
-Copy code
+```json
 curl -X POST http://127.0.0.1:8000/generate_scenario \
      -H "Content-Type: application/json" \
      -d '{"persona": "Explorer"}'
-
+```
 ---
 
 ### 🧑‍💻 Author
