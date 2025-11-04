@@ -39,7 +39,7 @@ Generate a persona-based storyline and subscenario.
   "persona": "Dreamer"
 }
 Example Curl:
-bash
+
 Copy code
 curl -X POST https://persona-storyline.onrender.com/generate_scenario \
      -H "Content-Type: application/json" \
@@ -62,14 +62,14 @@ This project generates a 7-day continuous storyline and substoryline based on us
 
 ### ⚙️ Local Setup
 
-bash
+
 Copy code
 git clone https://github.com/MAN-2/Persona_Based_Storyline_API.git
 cd Persona_Based_Storyline_API
 
 Create and activate virtual environment
 
-bash
+
 Copy code
 python -m venv venv
 source venv/bin/activate   # On Mac/Linux
@@ -77,19 +77,19 @@ venv\Scripts\activate      # On Windows
 
 Install dependencies
 
-bash
+
 Copy code
 pip install -r requirements.txt
 
 Create .env file
 
-bash
+
 Copy code
-GROQ_API_KEY=your_api_key_here
+API_key=your_api_key_here
 
 Run locally
 
-bash
+
 Copy code
 uvicorn main:app --reload
 
@@ -97,7 +97,7 @@ uvicorn main:app --reload
 
 ### 🚀 Test the Endpoint
 
-bash
+
 Copy code
 curl -X POST http://127.0.0.1:8000/generate_scenario \
      -H "Content-Type: application/json" \
